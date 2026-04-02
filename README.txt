@@ -1,5 +1,5 @@
 -------- Tạo Migration
-dotnet ef migrations add AddTableNhaCungCapThuongHieu
+dotnet ef migrations add AddInitTable
 ---------- Update Database
 dotnet ef database update
 
