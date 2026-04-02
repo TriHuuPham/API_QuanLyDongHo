@@ -2,7 +2,11 @@
 using API_DesignPartern.Repositories.DongHoRepositories;
 using API_DesignPartern.Services.DongHoService;
 using API_QLDongHo_DesignPartern.Repositories.NhaCungCapRepositories;
+using API_QLDongHo_DesignPartern.Repositories.PhanLoaiRepositories;
+using API_QLDongHo_DesignPartern.Repositories.ThuongHieuRepositories;
 using API_QLDongHo_DesignPartern.Services.NhaCungCapService;
+using API_QLDongHo_DesignPartern.Services.PhanLoaiService;
+using API_QLDongHo_DesignPartern.Services.ThuongHieuService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,11 +28,17 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 
 // ------------------------------ Đăng ký các dịch vụ của ứng dụng ------------------------------
+// ------------------------ Services ------------------------
 builder.Services.AddScoped<IDongHoServices, DongHoServices>();
+builder.Services.AddScoped<INhaCungCapServices, NhaCungCapServices>();
+builder.Services.AddScoped<IPhanLoaiServices, PhanLoaiServices>();
+builder.Services.AddScoped<IThuongHieuServices, ThuongHieuServices>();
+
+// ------------------------ Repository ------------------------
 builder.Services.AddScoped<IDongHoRepository, DongHoRepository>();
 builder.Services.AddScoped<INhaCungCapRepository, NhaCungCapRepository>();
-builder.Services.AddScoped<INhaCungCapServices, NhaCungCapServices>();
-
+builder.Services.AddScoped<IThuongHieuRepository, ThuongHieuRepository>();
+builder.Services.AddScoped<IPhanLoaiRepository, PhanLoaiRepository>();
 
 
 

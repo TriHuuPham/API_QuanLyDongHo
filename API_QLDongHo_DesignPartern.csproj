@@ -20,11 +20,4 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositories\ThuongHieuRepositories\" />
-    <Folder Include="Repositories\PhanLoaiRepositories\" />
-    <Folder Include="Services\PhanLoaiService\" />
-    <Folder Include="Services\ThuongHieuService\" />
-  </ItemGroup>
-
 </Project>
